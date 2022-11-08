@@ -1,0 +1,46 @@
+.IInpHov {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.IInpBar {
+	position: absolute;
+	top: 2cm;
+	left: 2cm;
+	right: 2cm;
+	bottom: 2cm;
+	background: #ffffff;
+	padding: 0.5cm;
+	border: 2px solid #000000;
+	font-size: 0.5cm;
+}
+
+.IInpSmall {
+	font-size: 0.5cm;
+}
+
+.IInpLine {
+	top: 0.2cm;
+}
+
+.IInpBar textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 50%;
+}
+
+.IInpBtnBox {
+	position: absolute;
+	left: 0.5cm;
+	bottom: 0.5cm;
+}
+
+.IInpBtnBox button {
+	font-size: 0.6cm;
+	padding-left: 0.2cm;
+	padding-right: 0.2cm;
+}

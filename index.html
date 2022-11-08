@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.6">
+	<title>|简·陋| - 并列计算器</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css" />
+	<script type="text/javascript" src="./script/rpnify.js"></script>
+	<script type="text/javascript" src="./script/calc.js"></script>
+	<script type="text/javascript" src="./script/cookie.js"></script>
+	<script type="text/javascript" src="./script/web.js"></script>
+	<script type="text/javascript" src="./script/tool.js"></script>
+</head>
+
+<body>
+	<div class="IBlkBar" id="IExprBar">
+		<div class="IExprInn">
+			<div class="IExprHalf">
+				<span class="IExprH1">表达式：</span>
+				<div class="IExprText"><textarea id="IExpr" wrap="off"></textarea></div>
+			</div>
+			<div class="IExprHalf">
+				<span class="IExprH1">结果：</span>
+				<pre id="IExprRslt" class="IExprText IExprBlack"></pre>
+			</div>
+			<div onclick="doCalc()" class="IExprBtn IBlk">计算</div>
+		</div>
+		<div name="BMove" style="display: none;"></div>
+	</div>
+	<div id="IValBar" class="IBlkBar">
+		<div class="IBlkOut">
+			<div class="IBlk IBlkNofloat">
+				列宽<input oninput="wcWidth(this.value)" value="1" id="IValWidth" type="number" />
+			</div>
+		</div><br id="IAddVal" />
+		<div class="IBlkOut">
+			<div class="IBlk" onclick="goReg('Val')">> 新变量</div>
+		</div>
+		<div name="BMove"></div>
+	</div>
+	<div id="IOpeBar" class="IBlkBar"><br id="IAddOpe" />
+		<div class="IBlkOut">
+			<div class="IBlk" onclick="goReg('Ope')">> 新运算</div>
+		</div><br />
+		<div class="IBlkOut">
+			<div class="IBlk" onclick="goOut(true)">
+				> 导出
+			</div>
+		</div><br />
+		<div class="IBlkOut">
+			<div class="IBlk" onclick="goOut(false)">
+				> 导入
+			</div>
+		</div>
+		<div class="IOpeReset">
+			<a href="./help.html">点我查看指南</a>
+			<div style="height: 0.2cm;"></div>
+			<a href="javascript:reset();">导入基础配置</a>
+			<div style="height: 0.2cm;"></div>
+			<a href="javascript:clearOaV();">清空配置</a>
+		</div>
+		<div name="BMove"></div>
+	</div>
+	<div id="IFunHov" class="IInpHov">
+		<div class="IInpBar">
+			定义<span id="IFunTip"></span>：<input id="IFunName" class="IInpSmall" type="text" />
+			<hr class="IInpLine" /><br />
+			<textarea id="IFunCode"></textarea>
+			<div class="IInpBtnBox">
+				<button onclick="regFunSure()">确定</button>
+				<button onclick="regFunCanc()">取消</button>
+			</div>
+		</div>
+	</div>
+	<div id="IOutHov" class="IInpHov">
+		<div class="IInpBar">
+			导<span id="IOutTip"></span>变量和运算
+			<hr class="IInpLine" /><br />
+			请<span id="IOutOpe"></span>数据串：
+			<textarea id="IOutCode"></textarea>
+			<div class="IInpBtnBox" id="IOutBtn2">
+				<button onclick="outSure()">确定</button>
+				<button onclick="outCanc()">取消</button>
+			</div>
+			<div class="IInpBtnBox" id="IOutBtn1">
+				<button onclick="outCanc()">完成</button>
+			</div>
+		</div>
+	</div>
+	<span style="position: fixed;left: 2px;bottom: 2px;z-index: 999;font-size: 0.35cm;">
+		|简·陋| - 并列计算器<br />
+		Ver 1.1.2022110700
+	</span>
+</body>
+
+</html>
