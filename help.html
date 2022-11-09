@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" id="fav" />
 	<title>使用指南 - |简·陋|并列计算器</title>
 	<style>
 		body {
@@ -96,6 +97,7 @@
 		function blackday() {
 			var bblackday = document.getElementById("iBD").checked;
 			if (bblackday) {
+				fav.href = "white-favicon.ico";
 				document.body.style.background = "#ffffff";
 				document.body.style.color = "#000000";
 				main.style.background = "#ffffff";
@@ -107,8 +109,10 @@
 				ccpiralogopic.src = "data:image/png;base64,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";
 				ccpiralogofont.style.background = "#000000";
 				ccpiralogofont.style.color = "#ffffff";
-				ccpiralogoccpira.style.color = "#09a2e6"
+				ccpiralogoccpira.style.color = "#09a2e6";
+				repofont.style.color = "";
 			} else {
+				fav.href = "black-favicon.ico";
 				document.body.style.background = "#333333";
 				document.body.style.color = "#ffffff";
 				main.style.background = "#333333";
@@ -121,6 +125,7 @@
 				ccpiralogofont.style.background = "#dddd00";
 				ccpiralogofont.style.color = "#000000";
 				ccpiralogoccpira.style.color = "#ffffff";
+				repofont.style.color = "#ffffff";
 			}
 		}
 		window.onload = function () {
@@ -128,7 +133,6 @@
 		}
 	</script>
 </head>
-<a href="../" id="sback"></a>
 
 <body>
 	<div id="main">
@@ -373,6 +377,7 @@
 				<div style="font-size: 0.6cm;">有任何问题请联系<br />QQ:<a class="soset"
 						style="font-size: 0.6cm;">2507917746</a><br />email:<a class="soset"
 						style="font-size: 0.6cm;">ccpira@163.com</a></div><br />
+				本项目遵循GPL v3.0开源协议：<a href="https://github.com/E0SelmY4V/sc-setcalc" id="repofont">github.com</a>
 				<hr /><br />
 				<div
 					style="padding-bottom: 0cm;padding-left: 0.1cm;padding-top: 0cm;width: 7.8cm;position: relative;display: block;">
