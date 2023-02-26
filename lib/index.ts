@@ -7,11 +7,12 @@
 declare module '.';
 
 import * as rpnify from './rpnify';
+import * as calc from './calc';
 import * as tool from './tool';
 import def from './calc';
-export * from './calc';
 export {
 	rpnify,
+	calc,
 	tool,
 	def as default,
 };
