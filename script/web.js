@@ -1,3 +1,4 @@
+/// <reference path="../build/global.d.ts" />
 onload = function () {
 	var moveFn = [], upFn = [], o = document.getElementsByName('BMove'), p = [], l = [];
 	function runFn(list, x, y) { for (var i = list.length - 1; i >= 0; --i) list[i](x, y); }
@@ -94,7 +95,7 @@ function wcWidth(n) {
 }
 function doCalc() {
 	var l = IExpr.value.split('\n'), r = '';
-	for (var i = 0; i < l.length; i++) r += calc(l[i]).join(' ') + '\n';
+	for (var i = 0; i < l.length; i++) r += calc.default(l[i]).join(' ') + '\n';
 	IExprRslt.innerHTML = r;
 	wcWidth(calc.width);
 }

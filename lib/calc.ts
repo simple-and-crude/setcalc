@@ -94,14 +94,10 @@ export function doCalc(expr: string) {
 	return rslt;
 }
 export default doCalc;
-/**判断是否是 {@link ArrayLike|`ArrayLike`} */
-export function isArrlike(n: any): n is ArrayLike<any> {
-	return typeof n === 'object' && isFinite(n.length);
-}
 /**空数组 */
 const VARR: any[] = [];
 /**以 {@link x|`x`} 填充一个长度为 {@link n|`n`} 的数组 */
-export function filledArr<N extends any[], T>(x: T, n: number, pre: readonly [...N]) {
+function filledArr<N extends any[], T>(x: T, n: number, pre: readonly [...N]) {
 	let y = [x];
 	const z = n % 2 ? (n--, [pre, y]) : [pre];
 	while (n > 0) n /= 2, y = y.concat(y), n % 2 && (z.push(y), n--);

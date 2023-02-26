@@ -6,8 +6,10 @@
  */
 declare module './tool';
 
-import { isArrlike } from './calc';
-
+/**判断是否是 {@link ArrayLike|`ArrayLike`} */
+export function isArrlike(n: any): n is ArrayLike<any> {
+	return typeof n === 'object' && isFinite(n.length);
+}
 const { stringify, parse } = JSON;
 /**你尽管写运算函数，它已经给你把 JSON 的编码解码打包好了 */
 export function jsonPack(fn: (a: any, b?: any) => any) {
@@ -23,7 +25,7 @@ export function copyObjs<T, L extends number>(n: T, len: L) {
 export function copyObj<T>(n: T) {
 	if (typeof n !== 'object') return n;
 	if (isArrlike(n)) {
-		const r = [];
+		const r: any[] = [];
 		for (let i = 0; i < n.length; i++) r.push(n[i]);
 		return r as T;
 	} else {
@@ -34,7 +36,7 @@ export function copyObj<T>(n: T) {
 }
 /**删掉 {@link arr|`arr`} 里 `===` 于 {@link n|`n`} 的元素 */
 export function weedArr<T, N extends T>(arr: readonly T[], n: N) {
-	const r = [];
+	const r: T[] = [];
 	for (let i = 0; i < arr.length; ++i) arr[i] === n || r.push(arr[i]);
 	return r as Exclude<T, N>[];
 }
