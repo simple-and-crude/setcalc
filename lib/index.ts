@@ -1,6 +1,6 @@
 /**
  * |简·陋| 并列计算器
- * @version 1.1107.1
+ * @version 1.10226.0
  * @license GPL-3.0-or-later
  * @link https://github.com/simple-and-crude/setcalc
  */

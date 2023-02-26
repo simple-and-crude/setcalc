@@ -1,7 +1,7 @@
 {
   "name": "@simple-and-crude/setcalc",
-  "version": "1.1107.1",
-  "description": "|简·陋| 并列计算器",
+  "version": "1.10226.0",
+  "description": "|简·陋| 并列计算器 | Parallel Calculator",
   "main": "./index.js",
   "types": "./types/index.d.ts",
   "scripts": {},
