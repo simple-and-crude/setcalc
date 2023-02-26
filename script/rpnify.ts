@@ -52,7 +52,7 @@ export function fmt(expr: string) {
  * 若有括号，则以数组形式存储 {@link ori|逆波兰} 后的括号中的各元素
  */
 function spl(expr: string) {
-	const a: (string | string[])[] = []
+	const a: (string | string[])[] = [];
 	let f = expr.length;
 	let l = 0;
 	for (let i = f - 1; i >= 0; --i) l

@@ -9,13 +9,13 @@ declare module './calc';
 import rpnify, { ths, rep, apply, reps } from './rpnify';
 
 /**运算 */
-export type CalcFn = (a: string, b?: string) => string
+export type CalcFn = (a: string, b?: string) => string;
 /**列宽 */
 export let width = 1;
 /**运算表 */
-export const operaSet: { [fn: string]: CalcFn } = {};
+export const operaSet: { [fn: string]: CalcFn; } = {};
 /**运算源代码表 */
-export const operaTxt: { [fn: string]: string } = {};
+export const operaTxt: { [fn: string]: string; } = {};
 /**创建运算使用的脚本元素 */
 export const nodeList: HTMLScriptElement[] = [];
 /**设置运算 */
@@ -31,9 +31,9 @@ export function setOpera(o: string, f: string | CalcFn) {
 	} else operaSet[o] = f;
 };
 /**变量表 */
-export const valueSet: { [p: string]: string[] } = {};
+export const valueSet: { [p: string]: string[]; } = {};
 /**变量源文本表 */
-export const valueTxt: { [p: string]: string } = {};
+export const valueTxt: { [p: string]: string; } = {};
 /**设置变量 */
 export function setValue(o: string, c: string) {
 	valueTxt[o] = c;
@@ -44,7 +44,7 @@ let usedVal: string[];
 /**判断表达式是否合法，并把表达式访问的所有变量名放到 {@link usedVal|`usedVal`} 里 */
 function analyse(n: string[]) {
 	let stack = 0;
-	let flag: { [sign: string]: true } = {};
+	let flag: { [sign: string]: true; } = {};
 	usedVal = [];
 	for (let j = 0; j < n.length; ++j) {
 		let sign = n[j].slice(2);
