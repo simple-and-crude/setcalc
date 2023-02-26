@@ -1,4 +1,10 @@
-/// <reference path="../build/global.d.ts" />
+/// <reference path="../global.d.ts" />
+(function () {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?6fe5d31c4f1a083a69e4a99cbed79158";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
+})();
 onload = function () {
 	var moveFn = [], upFn = [], o = document.getElementsByName('BMove'), p = [], l = [];
 	function runFn(list, x, y) { for (var i = list.length - 1; i >= 0; --i) list[i](x, y); }
