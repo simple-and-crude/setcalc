@@ -1,4 +1,4 @@
-/// <reference path="./help-logopic.d.ts" />
+/// <reference path="./logopic.d.ts" />
 function blackday() {
 	var bblackday = document.getElementById("iBD").checked;
 	if (bblackday) {
@@ -35,4 +35,4 @@ function blackday() {
 }
 onload = function () {
 	iBD.click();
-}
+};

@@ -69,7 +69,7 @@ let row: number;
 /**运算栈 */
 const vStack: string[][] = [];
 /**并列计算 */
-export function calc(expr: string) {
+export function doCalc(expr: string) {
 	if (!expr) return [];
 	const parsedExpr = rpnify(expr).split(' ');
 	const rslt: string[] = [];
@@ -93,7 +93,7 @@ export function calc(expr: string) {
 	width = oriWidth;
 	return rslt;
 }
-export default calc;
+export default doCalc;
 /**判断是否是 {@link ArrayLike|`ArrayLike`} */
 export function isArrlike(n: any): n is ArrayLike<any> {
 	return typeof n === 'object' && isFinite(n.length);

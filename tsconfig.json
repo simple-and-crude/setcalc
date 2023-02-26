@@ -1,4 +1,7 @@
 {
+	"include": [
+		"./lib",
+	],
 	"compilerOptions": {
 		"module": "CommonJS",
 		"moduleResolution": "Node",
