@@ -2,7 +2,8 @@
   "name": "@simple-and-crude/setcalc",
   "version": "1.1107.1",
   "description": "|简·陋| 并列计算器",
-  "main": "./build/index.js",
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
   "scripts": {},
   "keywords": [
     "calculator",

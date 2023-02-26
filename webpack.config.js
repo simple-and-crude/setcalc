@@ -1,9 +1,9 @@
 /**@type {import('webpack').Configuration} */
 const a = {
-	entry: __dirname + '/build/exp.js',
+	entry: __dirname + '/types/exp.js',
 	mode: 0 ? 'development' : 'production',
 	output: {
-		path: __dirname + '/build',
+		path: __dirname + '/types',
 		filename: 'packed.js'
 	},
 
