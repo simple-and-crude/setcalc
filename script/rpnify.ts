@@ -18,7 +18,7 @@ export function apply<T extends any[], R>(k: any, fn: (...args: T) => R, n: T): 
 }
 /**把 {@link b|`b`} 中的 {@link f|`f`} 都替换成 {@link t|`t`} */
 export function rep(b: string, f: string, t: string) {
-	return b.split(f).join(t);
+	return b.indexOf(f) !== -1 ? b.split(f).join(t) : b;
 }
 /**批量替换 */
 export function reps(b: string, f: string[], t: string[]): string {
@@ -46,7 +46,11 @@ export function fmt(expr: string) {
 		])
 	) + ' ');
 }
-/**以空格为分割符拆分表达式 */
+/**
+ * 以空格为分割符拆分表达式
+ *
+ * 若有括号，则以数组形式存储 {@link ori|逆波兰} 后的括号中的各元素
+ */
 function spl(expr: string) {
 	const a: (string | string[])[] = []
 	let f = expr.length;
@@ -60,7 +64,7 @@ function spl(expr: string) {
 			: expr[i] === ' ' && (a.push(expr.slice(i + 1, f)), f = i);
 	return a.reverse();
 }
-/**得到表达式解析后的元素数组 */
+/**得到 {@link expr|`expr`} 解析后的逆波兰元素数组 */
 function ori(expr: string): string[] {
 	const a = spl(fmt(expr));
 	a.pop();
@@ -72,6 +76,7 @@ function ori(expr: string): string[] {
 		), r.push('O_' + a[i]);
 	return r;
 }
+/**逆波兰化 */
 export function rpnify(expr: string) {
 	return ori(expr).join(' ');
 }
