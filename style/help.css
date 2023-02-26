@@ -1,0 +1,145 @@
+* {
+	position: relative;
+}
+
+body {
+	font-size: 0.45cm;
+	font-family: '微软雅黑', '黑体';
+	height: 100%;
+	text-align: center;
+}
+
+small {
+	font-size: 0.3cm;
+}
+
+p:not([class],[id],[name]) {
+	height: 0.1cm;
+	font-size: 0.1cm;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.list {
+	padding-left: 1cm;
+	padding-right: 1cm;
+	padding-top: 0.6cm;
+	padding-bottom: 0.6cm;
+}
+
+#Hlogo {
+	background: aqua;
+	padding-right: 5%;
+	position: relative;
+	text-align: right;
+	display: inline;
+	width: 17cm;
+	padding-top: 0.2cm;
+	padding-right: 1.5cm;
+	padding-left: 1.5cm;
+}
+
+#logoh {
+	width: 10cm;
+	position: absolute;
+	right: 0cm;
+}
+
+#main {
+	background-color: #fff;
+	width: 20cm;
+	display: inline-block;
+	position: relative;
+}
+
+.soset {
+	display: inline-block;
+	position: absolute;
+	right: 0.3cm;
+	font-size: 0.4cm;
+}
+
+.eqc {
+	text-align: center;
+	display: inline-block;
+	padding-left: 1px;
+	padding-right: 1px;
+	position: relative;
+}
+
+.toc {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+}
+
+.pre {
+	font-family: 'Consolas', 'Ubuntu Mono', Menlo, Monaco, 'Courier New', monospace;
+	background: #333333;
+	color: #ffffff;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	border: 1px solid #999999;
+}
+
+span[class=pre] {
+	display: inline-block;
+}
+
+div[class=pre] {
+	padding: 0.3em;
+}
+
+#sclogo {
+	font-size: 0.65cm;
+}
+
+#Hlogo a {
+	font-size: 0.5cm;
+}
+
+#Hlogo>p+a {
+	font-size: 0.8cm;
+}
+
+#main>div {
+	text-align: left;
+	display: inline-block;
+	width: 20cm;
+}
+
+.about {
+	font-size: 0.6cm;
+}
+
+.btmLogo {
+	padding-bottom: 0cm;
+	padding-left: 0.1cm;
+	padding-top: 0cm;
+	width: 7.8cm;
+	position: relative;
+	display: block;
+}
+
+#ccpiralogopic {
+	width: 1.8cm;
+}
+
+#ccpiralogoccpira {
+	font-size: 0.8cm;
+	position: absolute;
+	top: 0.2cm;
+	left: 2cm;
+	font-family: 'Vrinda';
+}
+
+#ccpiralogofont {
+	font-size: 0.3cm;
+	position: absolute;
+	top: 1.1cm;
+	left: 2cm;
+	width: 5.8cm;
+	height: 0.7cm;
+	padding-left: 0.1cm;
+}

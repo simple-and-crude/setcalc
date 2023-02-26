@@ -28,7 +28,7 @@ function EasyMCQ() { }
 EasyMCQ.prototype = {
 	/**@type {(n:number[],v?:string)=>EasyMCQ} */
 	same: function (n, v) {
-		for (var t = this, i = n.length - 1; i >= 0; ++i) v
+		for (var t = this, i = n.length - 1; i >= 0; --i) v
 			? typeof this[n[i]] === 'undefined'
 				? this[n[i]] = v
 				: this[n[i]] !== v && (t = new EasyMCQ(), i = -1)
