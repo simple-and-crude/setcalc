@@ -23,7 +23,7 @@
     "url": "https://github.com/simple-and-crude/setcalc/issues"
   },
   "devDependencies": {
-    "lethal-build": "^1.1.1",
+    "lethal-build": "^1.2.6",
     "typescript": "",
     "webpack": ""
   },
