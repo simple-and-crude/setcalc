@@ -1,15 +1,15 @@
-const { snake, exec, cmt, dels, cps, outFS, log } = require('lethal-build')(__dirname);
+const { snake, exec, cmt, dels, cps, outFS, log, goodReg, comp } = require('lethal-build')(__dirname);
 
 snake(
 	exec('tsc'),
 	cps([['lib/exp.js', 'types/exp.js']]),
-	exec('webpack'),
+	exec('npx webpack'),
 	outFS([
 		[1, cmt('lib/index.ts')],
 		[1, '!function(exp){'],
 		[0, 'types/packed.js'],
 		[1, '}(typeof module==="undefined"?false:module)']
 	], 'index.js'),
-	dels(/types[\/\\].*js$/),
+	dels(RegExp(`${goodReg(comp('types'))}[\\/\\\\].*js$`)),
 	log('OK.')
 );
