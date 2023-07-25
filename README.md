@@ -1,6 +1,6 @@
 # |简·陋| - 并列计算器
 
-网址：[http://sc.seventop.top/setcalc/](http://sc.seventop.top/setcalc/)
+[网址](https://simple-and-crude.github.io/setcalc/)
 
 本计算器名为“并列计算器”。顾名思义，本计算器用于解决多组数之间的运算问题。
 
